@@ -17,7 +17,7 @@ var urlToData: URL {
 }
 //https://newsapi.org/v2/everything?q=apple&from=2022-10-08&to=2022-10-08&sortBy=popularity&apiKey=8445507cd7604d3b8e79a4431a4630de
 
-func loadNews(){
+func loadNews(completionHandler: (()->Void)?){
     let url = URL(string: "https://newsapi.org/v2/everything?q=apple&from=2022-10-08&to=2022-10-08&sortBy=popularity&apiKey=8445507cd7604d3b8e79a4431a4630de")
     let session = URLSession(configuration: .default)
     
@@ -29,6 +29,9 @@ func loadNews(){
             parseNews()
             
             print(article.count)
+            
+            completionHandler?()
+            
         }
     }
     dowlondTask.resume()
