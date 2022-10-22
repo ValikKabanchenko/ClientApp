@@ -8,7 +8,35 @@
 import Foundation
 
 
-var article: [Article] = []
+var article: [Article] {
+   
+        let data = try? Data(contentsOf: urlToData)
+        if data == nil {
+            return []
+        }
+        
+        let rootDictionaryAny = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments)
+        if rootDictionaryAny == nil {
+            return []
+        }
+        
+        let rootDictionary = rootDictionaryAny as? Dictionary<String,Any>
+        if rootDictionary == nil {
+            return []
+        }
+        
+        if let array = rootDictionary!["articles"] as? [Dictionary<String,Any>] {
+            var returnArray: [Article] = []
+            
+            for dict in array {
+                let newArticle = Article(dictionary: dict)
+                returnArray.append(newArticle)
+            }
+        
+            return returnArray
+        }
+    return []
+}
 
 var urlToData: URL {
     let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0] + "/data.json"
@@ -26,7 +54,7 @@ func loadNews(completionHandler: (()->Void)?){
             try? FileManager.default.copyItem(at: urlFile!, to: urlToData)
             print(urlToData)
             
-            parseNews()
+            
             
             print(article.count)
             
@@ -36,31 +64,6 @@ func loadNews(completionHandler: (()->Void)?){
     }
     dowlondTask.resume()
 }
-func parseNews(){
-    let data = try? Data(contentsOf: urlToData)
-    if data == nil {
-        return
-    }
-    
-    let rootDictionaryAny = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-    if rootDictionaryAny == nil {
-        return
-    }
-    
-    let rootDictionary = rootDictionaryAny as? Dictionary<String,Any>
-    if rootDictionary == nil {
-        return
-    }
-    
-    if let array = rootDictionary!["articles"] as? [Dictionary<String,Any>] {
-        var returnArray: [Article] = []
-        
-        for dict in array {
-            let newArticle = Article(dictionary: dict)
-            returnArray.append(newArticle)
-        }
-    
-        article = returnArray
-    }
+
    
-}
+
