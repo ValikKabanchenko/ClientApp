@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uW2-uh-RqO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ppn-iJ-WDT">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -13,7 +13,7 @@
             <objects>
                 <tableViewController id="hRd-Li-ayf" customClass="TableViewController" customModule="ClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="1Ni-oy-oyQ">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.91372549530000002" green="0.49803921579999999" blue="0.270588249" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
@@ -72,7 +72,7 @@
             <objects>
                 <viewController storyboardIdentifier="oneNewsSID" id="qD8-mV-Jp9" customClass="OneNewsViewController" customModule="ClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6l6-JU-SlZ">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Ygr-tZ-KKv">
@@ -121,6 +121,93 @@
             </objects>
             <point key="canvasLocation" x="2444.8598130841119" y="66.738660907127439"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="j1o-nU-fOl">
+            <objects>
+                <viewController id="ppn-iJ-WDT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6uS-Ho-6HV">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 13 Pro Max - 1" translatesAutoresizingMaskIntoConstraints="NO" id="XTF-o0-8Fv">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rui-jJ-bQh">
+                                <rect key="frame" x="131" y="713" width="165" height="64"/>
+                                <color key="tintColor" red="0.9098039269" green="0.39215683940000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Rectangle 19" imagePlacement="leading" imagePadding="0.0">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="default"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="uW2-uh-RqO" kind="showDetail" id="tVc-hC-Kio"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="z9p-aS-G63"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Rui-jJ-bQh" firstAttribute="leading" secondItem="z9p-aS-G63" secondAttribute="leading" constant="131" id="4sm-5y-h7p"/>
+                            <constraint firstAttribute="bottom" secondItem="XTF-o0-8Fv" secondAttribute="bottom" id="7oF-DZ-cH6"/>
+                            <constraint firstItem="XTF-o0-8Fv" firstAttribute="trailing" secondItem="z9p-aS-G63" secondAttribute="trailing" id="XBt-ab-bzL"/>
+                            <constraint firstItem="XTF-o0-8Fv" firstAttribute="leading" secondItem="z9p-aS-G63" secondAttribute="leading" id="YCO-0P-en4"/>
+                            <constraint firstItem="Rui-jJ-bQh" firstAttribute="top" secondItem="z9p-aS-G63" secondAttribute="top" constant="669" id="e5u-uX-clg"/>
+                            <constraint firstItem="z9p-aS-G63" firstAttribute="trailing" secondItem="Rui-jJ-bQh" secondAttribute="trailing" constant="132" id="kbl-dX-PCy"/>
+                            <constraint firstItem="XTF-o0-8Fv" firstAttribute="top" secondItem="6uS-Ho-6HV" secondAttribute="top" id="lQP-hX-VfI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8z-r4-ayI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2204" y="67"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="idm-E5-SqJ">
+            <objects>
+                <viewController id="BvQ-oA-jGe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V8c-vt-dUw">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 49" translatesAutoresizingMaskIntoConstraints="NO" id="mIn-Vj-cCB">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWy-ek-1NV">
+                                <rect key="frame" x="54" y="293" width="320" height="340"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="9P0-Ye-8Am">
+                                        <rect key="frame" x="103" y="229" width="115" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="pageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="currentPageIndicatorTintColor" red="0.9098039269" green="0.39215683940000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </pageControl>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDl-7I-2Ou">
+                                        <rect key="frame" x="127" y="262" width="67" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RFS-D8-Y3U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oWy-ek-1NV" firstAttribute="centerY" secondItem="mIn-Vj-cCB" secondAttribute="centerY" id="1Lj-gC-8sS"/>
+                            <constraint firstItem="RFS-D8-Y3U" firstAttribute="trailing" secondItem="oWy-ek-1NV" secondAttribute="trailing" constant="54" id="DDh-Vq-lL0"/>
+                            <constraint firstItem="oWy-ek-1NV" firstAttribute="leading" secondItem="RFS-D8-Y3U" secondAttribute="leading" constant="54" id="KHL-Eb-Z5k"/>
+                            <constraint firstItem="oWy-ek-1NV" firstAttribute="top" secondItem="RFS-D8-Y3U" secondAttribute="top" constant="249" id="KSr-Hg-9x8"/>
+                            <constraint firstItem="mIn-Vj-cCB" firstAttribute="leading" secondItem="RFS-D8-Y3U" secondAttribute="leading" id="Vkm-s5-RTz"/>
+                            <constraint firstItem="mIn-Vj-cCB" firstAttribute="top" secondItem="V8c-vt-dUw" secondAttribute="top" id="i9L-IO-bfD"/>
+                            <constraint firstItem="mIn-Vj-cCB" firstAttribute="trailing" secondItem="RFS-D8-Y3U" secondAttribute="trailing" id="qwC-n2-f3R"/>
+                            <constraint firstAttribute="bottom" secondItem="mIn-Vj-cCB" secondAttribute="bottom" id="xmm-nY-OEy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gkq-bv-8TO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1505.6074766355139" y="-701.07991360691153"/>
+        </scene>
         <!--Top Stories-->
         <scene sceneID="ivS-0e-uqE">
             <objects>
@@ -128,7 +215,7 @@
                     <tabBarItem key="tabBarItem" title="Top Stories" image="Group 5" id="bg1-Na-leI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iZh-KE-FUv">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.91372549530000002" green="0.49803921579999999" blue="0.270588249" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" red="0.91372549530000002" green="0.49803921579999999" blue="0.270588249" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -143,13 +230,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3Q-W1-iVL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="713.55140186915878" y="67.386609071274307"/>
+            <point key="canvasLocation" x="-25" y="67"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Uu8-wZ-cCx">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="uW2-uh-RqO" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="umG-w4-Mel"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mhB-cR-iOU">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -162,7 +250,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpb-XE-VUZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-186.44859813084111" y="67.386609071274307"/>
+            <point key="canvasLocation" x="-1071" y="67"/>
         </scene>
         <!--My News-->
         <scene sceneID="N0l-j4-daq">
@@ -171,7 +259,7 @@
                     <tabBarItem key="tabBarItem" title="My News" image="Component 3" id="wtf-G4-Vqt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="x7B-di-lsO">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.91372549530000002" green="0.49803921579999999" blue="0.270588249" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
@@ -191,6 +279,9 @@
     <resources>
         <image name="Component 3" width="37" height="28"/>
         <image name="Group 5" width="31" height="31"/>
+        <image name="Rectangle 19" width="165" height="50"/>
+        <image name="Rectangle 49" width="428" height="878"/>
+        <image name="iPhone 13 Pro Max - 1" width="428" height="926"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
