@@ -14,6 +14,7 @@ class PageViewControlerViewController: UIPageViewController , UIPageViewControll
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.dataSource = self
         
         showViewControllers()
@@ -35,6 +36,7 @@ class PageViewControlerViewController: UIPageViewController , UIPageViewControll
     
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        
         let index = ((viewController as? OneNewsViewController)?.index ?? 0) - 1
         
         return self.pageViewController(for: index)

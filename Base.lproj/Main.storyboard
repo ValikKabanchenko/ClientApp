@@ -15,31 +15,32 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="1Ni-oy-oyQ">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.91372549530000002" green="0.49803921579999999" blue="0.270588249" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="EMn-Se-dzi" detailTextLabel="p1C-8E-bMU" style="IBUITableViewCellStyleSubtitle" id="njt-uV-uCw">
-                                <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationLevel="-1" indentationWidth="22" reuseIdentifier="Cell" textLabel="EMn-Se-dzi" detailTextLabel="p1C-8E-bMU" rowHeight="67" style="IBUITableViewCellStyleSubtitle" id="njt-uV-uCw">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="67"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="njt-uV-uCw" id="ALz-pU-nFK">
-                                    <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="67"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EMn-Se-dzi">
-                                            <rect key="frame" x="20" y="7.0000000000000009" width="25" height="14.333333333333334"/>
+                                            <rect key="frame" x="20" y="16.666666666666668" width="28.333333333333332" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="0.0"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p1C-8E-bMU">
-                                            <rect key="frame" x="19.999999999999996" y="23.333333333333336" width="40.666666666666664" height="13.333333333333334"/>
+                                            <rect key="frame" x="19.999999999999996" y="36" width="40.666666666666664" height="13.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -48,12 +49,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="News list" id="C43-Vu-T85"/>
-                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="VRE-y6-ajE">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <connections>
-                            <action selector="refreshControlAction:" destination="hRd-Li-ayf" eventType="valueChanged" id="3zm-Tp-1Ft"/>
-                        </connections>
-                    </refreshControl>
                     <connections>
                         <segue destination="qD8-mV-Jp9" kind="show" identifier="goToOneNews" id="lRc-bw-027"/>
                     </connections>
@@ -62,11 +57,11 @@
             </objects>
             <point key="canvasLocation" x="1505.6074766355139" y="66.738660907127439"/>
         </scene>
-        <!--Page View Controler View Controller-->
+        <!--My News-->
         <scene sceneID="VEu-mX-Jbh">
             <objects>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Wtm-8i-aS0" customClass="PageViewControlerViewController" customModule="ClientApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="ntV-iv-2kU"/>
+                    <navigationItem key="navigationItem" title="My News" id="ntV-iv-2kU"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWW-oS-jWN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,15 +121,20 @@
             </objects>
             <point key="canvasLocation" x="2444.8598130841119" y="66.738660907127439"/>
         </scene>
-        <!--TableView-->
+        <!--Top Stories-->
         <scene sceneID="ivS-0e-uqE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B9q-bI-FRp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="TableView" id="bg1-Na-leI"/>
+                    <tabBarItem key="tabBarItem" title="Top Stories" image="Group 5" id="bg1-Na-leI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iZh-KE-FUv">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.91372549530000002" green="0.49803921579999999" blue="0.270588249" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.91372549530000002" green="0.49803921579999999" blue="0.270588249" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.95686274770000002" green="0.96470588450000005" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -153,7 +153,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mhB-cR-iOU">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.91372549530000002" green="0.36470589040000001" blue="0.22745099660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="B9q-bI-FRp" kind="relationship" relationship="viewControllers" id="FiU-bH-2Uc"/>
@@ -164,15 +164,19 @@
             </objects>
             <point key="canvasLocation" x="-186.44859813084111" y="67.386609071274307"/>
         </scene>
-        <!--PageView-->
+        <!--My News-->
         <scene sceneID="N0l-j4-daq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I58-dZ-yUH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="PageView" id="wtf-G4-Vqt"/>
+                    <tabBarItem key="tabBarItem" title="My News" image="Component 3" id="wtf-G4-Vqt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="x7B-di-lsO">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.91372549530000002" green="0.49803921579999999" blue="0.270588249" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.95686274770000002" green="0.96470588450000005" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -185,6 +189,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Component 3" width="37" height="28"/>
+        <image name="Group 5" width="31" height="31"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
