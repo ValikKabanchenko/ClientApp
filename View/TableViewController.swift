@@ -9,6 +9,9 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+    
+   
+    
     @IBAction func refreshControlAction(_ sender: Any) {
         
         loadNews {
@@ -52,7 +55,8 @@ class TableViewController: UITableViewController {
         let article = article[indexPath.row]
         cell.textLabel?.text = article.title
         cell.detailTextLabel?.text = article.publishedAt
-
+        
+        
         return cell
     }
     
