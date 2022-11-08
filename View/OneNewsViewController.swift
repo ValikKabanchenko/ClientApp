@@ -21,9 +21,11 @@ class OneNewsViewController: UIViewController , SFSafariViewControllerDelegate{
     
     @IBOutlet weak var labelDescription: UILabel!
    
+    @IBOutlet weak var viesSeeMore: UIButton!
     
     
     @IBAction func pushOpenSafari(_ sender: Any) {
+        
         if let url = URL(string: article.url) {
             let svc = SFSafariViewController(url: url)
             present(svc, animated: true, completion: nil)
@@ -33,7 +35,10 @@ class OneNewsViewController: UIViewController , SFSafariViewControllerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        viesSeeMore.titleLabel!.numberOfLines = 1
+        viesSeeMore.titleLabel!.adjustsFontSizeToFitWidth = true
+        viesSeeMore.titleLabel!.lineBreakMode = .byClipping
         
         labelTitle.text = article.title
         labelDescription.text = article.description

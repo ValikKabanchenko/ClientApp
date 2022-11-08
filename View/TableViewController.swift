@@ -10,19 +10,22 @@ import UIKit
 class TableViewController: UITableViewController {
 
     
+    
    
     
-    @IBAction func refreshControlAction(_ sender: Any) {
-        
-        loadNews {
-            DispatchQueue.main.async {
-                self.refreshControl?.endRefreshing()
-                self.tableView.reloadData()
-            }
-            
-        }
-        
-    }
+//    @IBAction func refreshControlAction(_ sender: Any) {
+//
+//        loadNews {
+//            DispatchQueue.main.async {
+//                self.refreshControl?.endRefreshing()
+//                self.tableView.reloadData()
+//
+//            }
+//
+//        }
+//
+//
+//    }
     
     
     override func viewDidLoad() {
@@ -32,8 +35,9 @@ class TableViewController: UITableViewController {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-            
         }
+
+    
     }
 
     // MARK: - Table view data source
@@ -47,15 +51,15 @@ class TableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return article.count
     }
-
+   
+   
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ViewTableViewCell", for: indexPath) as! ViewTableViewCell
         let article = article[indexPath.row]
-        cell.textLabel?.text = article.title
-        cell.detailTextLabel?.text = article.publishedAt
-        
+       
+        cell.loadCellData(article)
+
         
         return cell
     }
@@ -71,6 +75,12 @@ class TableViewController: UITableViewController {
                 tableView.deselectRow(at: indexPath, animated: true)
             }
         }
+    }
+    
+    
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 100
     }
     /*
     // Override to support conditional editing of the table view.
@@ -114,4 +124,24 @@ class TableViewController: UITableViewController {
    
     */
 
+}
+extension UIImageView {
+    func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() { [weak self] in
+                self?.image = image
+            }
+        }.resume()
+    }
+    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        downloaded(from: url, contentMode: mode)
+    }
 }
