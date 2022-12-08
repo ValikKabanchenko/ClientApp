@@ -2,18 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Item 0</key>
+	<string>Anton</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string></string>
 	</array>
-	<key>item 3</key>
-	<string>Nanum_Gothic</string>
-	<key>Item 0</key>
-	<string>Anton</string>
-	<key>item 1</key>
-	<string>Manrope</string>
-	<key>item2</key>
-	<string>Poppins</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -33,5 +27,11 @@
 			</array>
 		</dict>
 	</dict>
+	<key>item 1</key>
+	<string>Manrope</string>
+	<key>item 3</key>
+	<string>Nanum_Gothic</string>
+	<key>item2</key>
+	<string>Poppins</string>
 </dict>
 </plist>
